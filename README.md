@@ -91,5 +91,5 @@ Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` pa
 ---
 
 ## 👤 Autor
-Desenvolvido por **Augusto Iseppe**. Entre em contato para mais informações ou colaborações! 🚀
+Desenvolvido por **Augusto Iseppe**. 🚀
 
