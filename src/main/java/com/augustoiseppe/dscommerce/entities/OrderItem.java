@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_order_item")
-public class OrdemItem {
+public class OrderItem {
 
     @EmbeddedId
     private OrderItemPK id = new OrderItemPK();
@@ -16,10 +16,10 @@ public class OrdemItem {
     private Integer quantity;
     private double price;
 
-    public OrdemItem() {}
+    public OrderItem() {}
 
 
-    public OrdemItem(Order order, Product product, Integer quantity, double price) {
+    public OrderItem(Order order, Product product, Integer quantity, double price) {
         id.setOrder(order);
         id.setProduct(product);
         this.quantity = quantity;
@@ -64,8 +64,8 @@ public class OrdemItem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        OrdemItem ordemItem = (OrdemItem) o;
-        return Objects.equals(id, ordemItem.id);
+        OrderItem orderItem = (OrderItem) o;
+        return Objects.equals(id, orderItem.id);
     }
 
     @Override
