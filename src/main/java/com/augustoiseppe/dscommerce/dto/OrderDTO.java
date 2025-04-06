@@ -3,12 +3,14 @@ package com.augustoiseppe.dscommerce.dto;
 import com.augustoiseppe.dscommerce.entities.Order;
 import com.augustoiseppe.dscommerce.entities.OrderItem;
 import com.augustoiseppe.dscommerce.entities.OrderStatus;
+import jakarta.validation.constraints.NotEmpty;
 
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDTO {
+
     private Long id;
     private Instant moment;
     private OrderStatus status;
@@ -16,7 +18,11 @@ public class OrderDTO {
     private ClientDTO client;
     private PaymentDTO payment;
 
+    @NotEmpty(message = "Seu pedido deve ter pelo menos um item")
     private List<OrderItemDTO> items = new ArrayList<>();
+
+    public OrderDTO() {
+    }
 
     public OrderDTO(Long id, Instant moment, OrderStatus status, ClientDTO client, PaymentDTO payment) {
         this.id = id;
@@ -27,11 +33,11 @@ public class OrderDTO {
     }
 
     public OrderDTO(Order entity) {
-        id = entity.getId();
-        moment = entity.getMoment();
-        status = entity.getStatus();
-        client = new ClientDTO(entity.getClient());
-        payment = (entity.getPayment() == null) ? null : new PaymentDTO(entity.getPayment());
+        this.id = entity.getId();
+        this.moment = entity.getMoment();
+        this.status = entity.getStatus();
+        this.client = new ClientDTO(entity.getClient());
+        this.payment = (entity.getPayment() == null) ? null : new PaymentDTO(entity.getPayment());
         for (OrderItem item : entity.getItems()) {
             OrderItemDTO itemDto = new OrderItemDTO(item);
             items.add(itemDto);

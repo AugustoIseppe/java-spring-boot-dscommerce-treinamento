@@ -18,8 +18,7 @@ public class OrderItem {
 
     public OrderItem() {}
 
-
-    public OrderItem(Order order, Product product, Integer quantity, double price) {
+    public OrderItem(Order order, Product product, Integer quantity, Double price) {
         id.setOrder(order);
         id.setProduct(product);
         this.quantity = quantity;
