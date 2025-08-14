@@ -1,3 +1,13 @@
+![Java](https://img.shields.io/badge/Java-17-orange?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.4-brightgreen?logo=springboot&logoColor=white)
+![Spring Web](https://img.shields.io/badge/Spring%20Web-REST-blue)
+![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-ORM-lightgrey)
+![H2 Database](https://img.shields.io/badge/H2-Database-inmemory-blue?logo=h2database&logoColor=white)
+![Hibernate Validator](https://img.shields.io/badge/Hibernate%20Validator-Validation-red)
+![JUnit](https://img.shields.io/badge/JUnit-Testing-lightblue)
+![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?logo=apachemaven&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 # 🛒 DSCommerce - API REST com Spring Boot
 
 ## 📜 Descrição
